@@ -1,85 +1,329 @@
-body{
-    background-color: black;
-    color: white;
+body {
+   background-color: rgb(0, 0, 0);
 }
 
-.header{
-    align-items: center;
-    height: 120px;
+.header {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 50px;
+   position: absolute;
+   width: 100%;
+   top: 0;
+   backdrop-filter: blur(8px);
+}
+
+.logo {
+   width: 150px;
+   height: 150px;
+   border: 2px solid #a100ff;
+   border-radius: 50%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.logo img {
+   width: 60px;
+}
+
+.navigation {
+   border: 2px solid #a100ff;
+   border-radius: 20px 40px;
+   padding: 10px 30px;
+
+}
+
+.menu {
+   display: flex;
+   list-style: none;
+   gap: 30px;
+   padding: 20px;
+}
+
+
+.item a {
+   text-decoration: none;
+   padding: 25px;
+   transition: 0.8s ease-in-out;
+   font-size: 16px;
+   border-radius: 20px;
+
+}
+
+.item a:hover {
+   border: 1px solid #34EDF3;
+   color: #34EDF3;
+
+}
+
+.panels {
+   height: 1300px;
+   background-image: url('../img/fundo-ofc.png');
+   background-size: cover;
+
+}
+
+.inicio {
+   display: flex;
+   padding: 110px 80px;
+   color: white;
+   height: 900px;
+ background-size: cover;
+   background: url('../img/fundo-inicio.png') center;
+}
+
+.inicio-container {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   gap: 60px;
+}
+
+.inicio-left {
+   width: 40%;
+}
+
+.inicio_title {
+   color: #ff00ff;
+   font-size: 40px;
+   letter-spacing: 4px;
+   padding: 30px;
+}
+
+.inicio_subtitle {
+   color: #ff00ff;
+   font-size: 28px;
+   padding: 10px;
+}
+
+.inicio_text {
+   line-height: 1.6;
+   padding: 30px;
+}
+
+
+.inicio-line {
+   width: 2px;
+   height: 500px;
+   background: #aaa;
+   opacity: 0.5;
+}
+
+.inicio-right {
+   width: 40%;
+   position: relative;
+}
+
+
+.history {
+   text-align: center;
+   padding: 120px 20px;
+   color: white;
+   background-image: url(../img/fundo-hitoria.-fotor-enhance-20260312113856.jpg);
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+}
+
+.history_title {
+   font-size: 50px;
+   color: #ff00ff;
+}
+
+.history_box {
+   max-width: 500px;
+   margin: auto;
+   padding: 40px;
+   background: rgba(101, 0, 152, 0.35);
+   border-radius: 25px;
+   backdrop-filter: blur(3px);
+}
+
+.history_text {
+   font-size: 16px;
+   line-height: 1.6;
+}
+
+.characters {
+   background-color: #000;
+   color: #fff;
+   text-align: center;
+   padding: 60px 20px;
+   height: 1210px;
+   background-image: url(../img/fundo-inicio.png);
+   background-size: cover;
+}
+
+.characters_title {
+   color: #ff00ff;
+   font-size: clamp(2rem, 5vw, 4rem);
+   margin-bottom: 10px;
+}
+
+.characters_description {
+   margin-bottom: 40px;
+   color: #ccc;
+}
+
+.characters_container {
+   display: flex;
+   gap: 50px; padding: 90px;
+}
+
+.character-card {
     display: flex;
-    justify-content: space-between;
-    gap: 24px;
-    width: 100%;
-    max-width: 1200px;
-    padding: 0 16px;
-    margin: 0 auto;
-}
-
-.header .img{ 
-  width: 30px; 
-  height: auto; 
-}
-
-
-.logo{
-    height: 120px;
-    display: flex;
-    gap: 20px;
-}
-
-.menu{
-    display: flex;
-    gap: 20px;
-    border:  solid #F715AB;
-    border-radius: 20px;
+   flex-direction: column;
+   align-items: center;
+   margin: auto;
+   border-radius: 20px;
+   background: linear-gradient(200deg, #2cb9ff 0%, #6e2471 100%);
+   padding: 40px;
+   width: 320px;
 
 }
 
-.menu .item{
-    border: 1px solid#000000;
-    padding: 25px;
-    transition: 0.6s ease-in-out;
-    border-radius: 20px;
-    font-family: Quantico;
+.character-card_name {
+  padding-bottom: 30px;
+  font-size: x-large;
+}
+
+.image-container {
+   width: 200px;
+   height: 200px;
+   background-color: #333;
+   border-radius: 25px;
+   overflow: hidden;
+   margin: auto;
+}
+
+.characters-card_img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+
+.characters-card_bio{
+   padding: 40px;
+   font-size: 0.9rem;
+   margin-bottom: 20px;
+   color: #bdc3c7;
+   min-height: 40px;
+}
+
+.character-card_stats li {
+   padding: 8px;
+   font-family: Quantico;
 
 }
 
-.menu .item:hover{
-    border: 1px solid #34EDF3;
-    color: #34EDF3;
+.stats-banner {
+   font-size: 30px;
+   padding: auto;
+
 }
 
 
-.inicio{
-    display: flex;
-    flex-direction: column;
-    background-color: #000000;
-    align-items: center;
-    padding: 80px;
+
+/* CARD2 */
+
+.character-card2 {
+   background: linear-gradient(200deg, #2cb9ff 0%, #6e2471 100%);
+   padding: 40px;
+   width: 320px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   margin: auto;
+   border-radius: 20px;
 }
 
-.inicio_title{
-    justify-content: center;
-    color: #34EDF3;
-    font-family: Amarante;
-    padding: 50px;
+.character-card2_name {
+   padding-bottom: 30px;
+  font-size: x-large;
 }
 
-.inicio_img{
- 
-  
+.image-container{
+   width: 200px;
+   height: 200px;
+   background-color: #333;
+   border-radius: 25px;
+   overflow: hidden;
+   margin: auto;
 }
 
-.inici_text{
-    display: flex;
-   
+.character-card2_img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
 }
 
-.characters{
-    padding: 60px 20px;
-    color: #F715AB;
+.character-card_bio{
+   font-size: 0.9rem;
+   margin-bottom: 20px;
+   color: #bdc3c7;
+   min-height: 40px;
 }
 
-.characters_container{
-    
+.character-card2_stats li {
+   padding: 8px;
+   font-family: Quantico;
 }
+
+.stats-banner2{
+   font-size: 30px;
+   padding: auto;
+
+}
+/* 
+Card3 */
+
+.character-card3 {
+   background: linear-gradient(200deg, #2cb9ff 0%, #6e2471 100%);
+   padding: 40px;
+   width: 320px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   margin: auto;
+   border-radius: 20px;
+}
+
+.character-card3_name {
+   padding-bottom: 30px;
+  font-size: x-large;
+}
+
+.image-container{
+   width: 200px;
+   height: 200px;
+   background-color: #333;
+   border-radius: 25px;
+   overflow: hidden;
+   margin: auto;
+}
+
+.character-card3_img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+
+.character-card3_bio{
+   font-size: 0.9rem;
+   margin-bottom: 20px;
+   color: #bdc3c7;
+   min-height: 40px;
+}
+
+.character-card3_stats li {
+   padding: 8px;
+   font-family: Quantico;
+}
+
+.stats-banner3{
+   font-size: 30px;
+   padding: auto;
+
+}
+
